@@ -1,0 +1,142 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 2017-4-29 21:04:17 by Hibernate Tools 3.5.0.Final -->
+<hibernate-mapping>
+    <class name="com.ssh.model.Score" table="SCORE">
+        <id name="id" type="java.lang.Long">
+            <column name="ID" />
+            <generator class="native" />
+        </id>
+        <property name="isscored" type="java.lang.Long">
+            <column name="ISSCORED" />
+        </property>
+        <property name="tzs_1" type="java.lang.Long">
+            <column name="TZS_1" />
+        </property>
+        <property name="tzs_2" type="java.lang.Long">
+            <column name="TZS_2" />
+        </property>
+        <property name="tzs_3" type="java.lang.Long">
+            <column name="TZS_3" />
+        </property>
+        <property name="tzs_4" type="java.lang.Long">
+            <column name="TZS_4" />
+        </property>
+        <property name="tzs_5" type="java.lang.Long">
+            <column name="TZS_5" />
+        </property>
+        <property name="bz_1" type="java.lang.Long">
+            <column name="BZ_1" />
+        </property>
+        <property name="bz_2" type="java.lang.Long">
+            <column name="BZ_2" />
+        </property>
+        <property name="bz_3" type="java.lang.Long">
+            <column name="BZ_3" />
+        </property>
+        <property name="bz_4" type="java.lang.Long">
+            <column name="BZ_4" />
+        </property>
+        <property name="bz_5" type="java.lang.Long">
+            <column name="BZ_5" />
+        </property>
+        <property name="dxwy_1" type="java.lang.Long">
+            <column name="DXWY_1" />
+        </property>
+        <property name="dxwy_2" type="java.lang.Long">
+            <column name="DXWY_2" />
+        </property>
+        <property name="dxwy_3" type="java.lang.Long">
+            <column name="DXWY_3" />
+        </property>
+        <property name="dxwy_4" type="java.lang.Long">
+            <column name="DXWY_4" />
+        </property>
+        <property name="dxwy_5" type="java.lang.Long">
+            <column name="DXWY_5" />
+        </property>
+        <property name="xxwy_1" type="java.lang.Long">
+            <column name="XXWY_1" />
+        </property>
+        <property name="xxwy_2" type="java.lang.Long">
+            <column name="XXWY_2" />
+        </property>
+        <property name="xxwy_3" type="java.lang.Long">
+            <column name="XXWY_3" />
+        </property>
+        <property name="xxwy_4" type="java.lang.Long">
+            <column name="XXWY_4" />
+        </property>
+        <property name="xxwy_5" type="java.lang.Long">
+            <column name="XXWY_5" />
+        </property>
+        <property name="wtwy_1" type="java.lang.Long">
+            <column name="WTWY_1" />
+        </property>
+        <property name="wtwy_2" type="java.lang.Long">
+            <column name="WTWY_2" />
+        </property>
+        <property name="wtwy_3" type="java.lang.Long">
+            <column name="WTWY_3" />
+        </property>
+        <property name="wtwy_4" type="java.lang.Long">
+            <column name="WTWY_4" />
+        </property>
+        <property name="wtwy_5" type="java.lang.Long">
+            <column name="WTWY_5" />
+        </property>
+        <property name="xlwy_1" type="java.lang.Long">
+            <column name="XLWY_1" />
+        </property>
+        <property name="xlwy_2" type="java.lang.Long">
+            <column name="XLWY_2" />
+        </property>
+        <property name="xlwy_3" type="java.lang.Long">
+            <column name="XLWY_3" />
+        </property>
+        <property name="xlwy_4" type="java.lang.Long">
+            <column name="XLWY_4" />
+        </property>
+        <property name="xlwy_5" type="java.lang.Long">
+            <column name="XLWY_5" />
+        </property>
+        <property name="shwy_1" type="java.lang.Long">
+            <column name="SHWY_1" />
+        </property>
+        <property name="shwy_2" type="java.lang.Long">
+            <column name="SHWY_2" />
+        </property>
+        <property name="shwy_3" type="java.lang.Long">
+            <column name="SHWY_3" />
+        </property>
+        <property name="shwy_4" type="java.lang.Long">
+            <column name="SHWY_4" />
+        </property>
+        <property name="shwy_5" type="java.lang.Long">
+            <column name="SHWY_5" />
+        </property>
+        <property name="zzwy_1" type="java.lang.Long">
+            <column name="ZZWY_1" />
+        </property>
+        <property name="zzwy_2" type="java.lang.Long">
+            <column name="ZZWY_2" />
+        </property>
+        <property name="zzwy_3" type="java.lang.Long">
+            <column name="ZZWY_3" />
+        </property>
+        <property name="zzwy_4" type="java.lang.Long">
+            <column name="ZZWY_4" />
+        </property>
+        <property name="zzwy_5" type="java.lang.Long">
+            <column name="ZZWY_5" />
+        </property>
+        <property name="evaluate" type="java.lang.String">
+            <column name="EVALUATE" />
+        </property>
+        
+        <many-to-one name="student" class="com.ssh.model.Student" fetch="join" unique="true" cascade="save-update" lazy="false">
+            <column name="uid" />
+        </many-to-one>
+    </class>
+</hibernate-mapping>
