@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+	"-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+	"http://struts.apache.org/dtds/struts-2.3.dtd">
+
+<struts>
+	<package name="myEduSystem" extends="struts-default">
+	
+		
+	
+		<action name="checkRegist" class="studentAction" method="isRegist" /> 
+		
+		<action name="regist" class="studentAction" method="Regist">
+			<result name="registsuccess" type="redirect">newwelcome.jsp</result>
+			<result name="registfail" type="redirect">regerror.html</result>
+		</action> 
+		
+		<action name="login" class="studentAction" method="Login" />
+		
+		<action name="logout" class="studentAction" method="Logout">
+			<result name="logoutsuccess" type="redirect">index.html</result>
+		</action>
+		
+		<action name="returnuserpage">
+			<result type="redirect">newwelcome.jsp</result>
+		</action>
+		
+		
+		<action name="change" class="studentAction" method="Changepassowrd" />
+		
+		
+		
+		<action name="logscore" class="scoreAction" method="Issubmit">
+			<result name="neversubmit" type="redirect">score.jsp</result>
+			<result name="hadsubmit" type="redirect">scoredetails.jsp</result>
+		</action>
+		
+		
+		<action name="submitscore" class="scoreAction" method="Submitscore">
+			<result name="hadsubmit" type="redirect">scoredetails.jsp</result>
+			<result name="submitsuccess" type="redirect">scoredetails.jsp</result>
+		</action>
+		
+		
+		
+		
+		
+		<!--后来新增  -->
+		
+		<action name="adminlog" class="adminAction" method="execute">
+			<result name="fail">adminlog.jsp</result>
+    		<result name="success">admin.jsp</result>
+    		
+  		</action> 
+		
+		
+		<action name="isLogin" class="studentAction" method="isLogin" />
+		
+		
+		
+		<action name="showscore" class="adminAction" method="showScore">
+			<result name="success">showscore.jsp</result>
+		</action>
+		
+		
+		<!-- 上传文件的action -->
+		<action name="uploadpic" class="uploadAction" method="uploadpicture">
+			<result name="success" type="redirect">newwelcome.jsp</result>
+		</action>
+		
+		
+		 <!-- 发布动态的action -->
+		 <action name="publishMessage" class="publishMessageAction" method="PublishNewMessage">
+		 </action>
+		 
+		 <!-- 删除动态的action -->
+		 <action name="deleteMessage" class="publishMessageAction" method="DeleteMessage">
+		 </action>
+		
+		
+	</package>
+   
+</struts>
