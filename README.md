@@ -17,3 +17,63 @@
     7. adminlog.jsp     //管理员登录页<br>
     8. admin.jsp        //管理员主页<br>
     9. showscore.jsp        //查看具体某个学生分数的页面<br>
+    
+    
+
+
+----------
+## 各个页面的布局架构 ##
+
+ 
+
+ - index.html
+=============
+ - 登录
+
+    登录由ajax实现，登录按钮绑定了onclick方法
+    `<button data-dismiss="modal" class="btn btn-primary"`             ` type="button" onclick="log()" id="logbtn">登陆</button>`
+    log（）函数如下：
+        var xmlhttp;
+    	function log(){
+    		var logbtn=document.getElementById("logbtn");
+    		logbtn.disabled="disabled";//禁用按钮防止重复提交
+    		document.getElementById("tryagain").innerHTML="请2秒后重试";
+    
+    	  var username = document.getElementById("lusername").value;
+    	  var password=document.getElementById("lpassword").value;
+    	  var par="username="+username+"&password="+password;
+    	  var url = "login.action";
+    	 
+    	  xmlhttp =new XMLHttpRequest(); 
+    	  xmlhttp.onreadystatechange=logResult; //响应函数
+    	  xmlhttp.open("POST",url,false);   //设置访问的页面
+    	  xmlhttp.setRequestHeader("Content-type","application/x-www-form-urlencoded");
+    	  xmlhttp.send(par);  //执行访问
+    
+    	  setTimeout(btnactive,2000);
+    	}
+    	 
+    	function logResult(){
+    	  if (xmlhttp.readyState==4 && xmlhttp.status==200)
+    		  console.log(xmlhttp.responseText);
+    		if (xmlhttp.responseText=="true") 
+    		{
+    			window.location.href="newwelcome.jsp";
+    		}
+    		else
+    		{
+    			document.getElementById('logResult').innerHTML=xmlhttp.responseText;
+    		}
+    	    
+    	  
+    	}
+     
+    //2秒内禁用按钮，防止表单重复提交
+     	function btnactive()
+     	{
+     		document.getElementById("logbtn").removeAttribute('disabled');
+     		document.getElementById("tryagain").innerHTML="";
+     	}
+
+    
+    
