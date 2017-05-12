@@ -68,12 +68,32 @@
     	  
     	}
      
-    //2秒内禁用按钮，防止表单重复提交
-     	function btnactive()
-     	{
-     		document.getElementById("logbtn").removeAttribute('disabled');
-     		document.getElementById("tryagain").innerHTML="";
-     	}
 
+        //2秒内禁用按钮，防止表单重复提交
+         	function btnactive()
+         	{
+         		document.getElementById("logbtn").removeAttribute('disabled');
+         		document.getElementById("tryagain").innerHTML="";
+         	}
     
+    
+上例演示了此项目用ajax与后台通信的方式，本项目的ajax实现基本均如上例所示。
+    
+    
+
+
+----------
+
+各个页面与后台通信的url如下：（其实就是后台的action）
+===============================
+**1. index.html**
+    
+
+ - login.action: 
+    用来登录，采用ajax实现
+ - regist.action：
+    用来注册，表单方式提交<br>
+ `<form method="post" action="regist.action">` <br>
+
+
     
