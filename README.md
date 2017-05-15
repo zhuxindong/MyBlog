@@ -15,3 +15,11 @@
  2. 分数表 score
  3. 文章表 message
  4. 回复表 reply
+   表的字段详见sql/文件夹里面的sql脚本文件
+**为了提高数据库性能，一律不采用物理外键，表之间的关系均在业务逻辑内维护**
+
+## model层 ##
+    
+**源文件均在com.ssh.model包中**
+ 1. Student.class  //用户实体
+ 2. score.class  //学生打分结果对应的类
