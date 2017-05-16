@@ -22,4 +22,6 @@
     
 **源文件均在com.ssh.model包中**
  1. Student.class  //用户实体
- 2. score.class  //学生打分结果对应的类
+ 2. Score.class  //学生打分结果对应的类
+ 3. Message.class //文章表对应的类
+ 4. Reply.class //回复表对应的类
