@@ -95,6 +95,4 @@
     用来注册，表单方式提交<br>
  `<form method="post" action="regist.action">` <br>
    并通过ajax实时查询用户名是否已经被注册
-
-
-    
+   并且注册并登陆也是提交到这个action实现的
