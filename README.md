@@ -25,3 +25,9 @@
  2. Score.class  //学生打分结果对应的类
  3. Message.class //文章表对应的类
  4. Reply.class //回复表对应的类
+ 
+
+## 对应的DAO ##
+1. StudentDAO 
+    封装了对student的操作，具体包括:
+   1. FindStudentByUsername(String username) //根据用户名查询学生，返回值是Student对象的一个list
