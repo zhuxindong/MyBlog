@@ -30,11 +30,11 @@
 ## 对应的DAO ##
 1. StudentDAO 
     封装了对student的操作，具体包括:
-    //根据用户名查询学生，返回值是Student对象的一个list
+      *//根据用户名查询学生，返回值是Student对象的一个list*
    1. FindStudentByUsername(String username) 
     
-   //保存一个学生用户，传入参数为一个student对象
+      *//保存一个学生用户，传入参数为一个student对象*   
    2. public void SaveStudent(Student student)
    
-   //更新学生信息，传入参数为student对象
+      *//更新学生信息，传入参数为student对象*
    3. public void SaveStudent(Student student)
