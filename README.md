@@ -44,9 +44,8 @@
 
     public List<Object[]> FindHadscoredStudent()
 	{
-	String sql="select distinct "+
-	"dq1401.* from dq1401,score where    
-	dq1401.id=score.uid and score.isscored=1";
+	String sql="select distinct "+"dq1401.* from dq1401,score 
+	where dq1401.id=score.uid and score.isscored=1";
 		
 	return this.getSession().createSQLQuery(sql).list();
 	}
