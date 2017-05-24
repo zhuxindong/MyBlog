@@ -28,13 +28,25 @@
  
 
 ## 对应的DAO ##
-1. StudentDAO 
+ 1. StudentDAO 
     封装了对student的操作，具体包括:
       *//根据用户名查询学生，返回值是Student对象的一个list*
-   1. FindStudentByUsername(String username) 
+ 2. FindStudentByUsername(String username) 
     
       *//保存一个学生用户，传入参数为一个student对象*   
-   2. public void SaveStudent(Student student)
+ 3. public void SaveStudent(Student student)
    
       *//更新学生信息，传入参数为student对象*
-   3. public void SaveStudent(Student student)
+ 4. public void SaveStudent(Student student)
+   
+    
+ 5.  *//4.查询未打分的学生，返回值为List<Oblect[]>
+
+    public List<Object[]> FindHadscoredStudent()
+	{
+	String sql="select distinct "+
+	"dq1401.* from dq1401,score where    
+	dq1401.id=score.uid and score.isscored=1";
+		
+	return this.getSession().createSQLQuery(sql).list();
+	}
