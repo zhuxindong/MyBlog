@@ -101,3 +101,4 @@
 
 **2.newwelcom.jsp**
     这是用户主页，用户个人信息放在session域，所有人的动态放在application域，权限控制由EL表达式实现
+    头像：
