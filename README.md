@@ -14,7 +14,7 @@
     4. my_newwelcome.jsp    //个人主页，展现自己的动态<br>
     5. score.jsp        //打分页面<br>
     6. scoredetails.jsp     //打分之后的展示页面<br>
-    7. adminlog.jsp     //管理员登录页 <br>
+    7. adminlog.jsp      //管理员登录页 <br>
     8. admin.jsp         //管理员主页 <br>
     9. showscore.jsp       //查看具体某个学生分数的页面<br>
     
