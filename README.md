@@ -30,7 +30,7 @@
 =============
  - 登录
 
-    登录由ajax实现，登录按钮绑定了onclick方法
+     登录由ajax实现，登录按钮绑定了onclick方法
     `<button data-dismiss="modal" class="btn btn-primary"`             ` type="button" onclick="log()" id="logbtn">登陆</button>`
     log（）函数如下：
         var xmlhttp;
